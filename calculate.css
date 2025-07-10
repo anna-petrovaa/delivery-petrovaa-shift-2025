@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: airbnb-c;
+  src: url(../fonts/AirbnbCereal_W_Bk.otf);
+}
+@font-face {
+  font-family: eksell-c;
+  src: url(../fonts/Eksell-Display-TRIAL-Medium.ttf);
+}
+
+:root {
+  --mainColor: #3685fb;
+  --darkColor: #000000;
+  --greyColor: #344051;
+  --sectionColor: #f5f5f5;
+  --whiteColor: #ffffff;
+  --cardColor: #f0f6ff;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--sectionColor);
+}
+
+header {
+  /*max-width: 1440px;*/
+  background-color: var(--whiteColor);
+  width: 100%;
+  position: fixed;
+}
+
+nav {
+  display: flex;
+  margin: 0 15px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none; /* Убираем стандартные маркеры списка */
+
+  margin: auto;
+  width: 100%;
+}
+
+nav ul li {
+  display: flex;
+}
+
+nav ul li a {
+  display: block; /* Чтобы ссылка занимала всю область li */
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  background-color: var(--sectionColor);
+  margin: auto;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-basis: 40%;
+  justify-content: space-between;
+  padding: 113px 0px;
+}
+
+.header-container {
+  display: flex;
+  /*justify-content: space-between; вместо него в button-header применили margin-left
+    /*background-color: #ffffff; перенесла в родительский header*/
+  /*max-width: 1440px;*/
+  /*padding: 0px 240px; нельзя так */
+  max-width: 1000px; /*ограничиваем header */
+  margin: auto; /*чтобы  кнопку выйти оттолкнуть на максимум*/
+  align-items: center;
+}
+
+.navigation {
+  font-size: 16px;
+  font-family: airbnb-c;
+  line-height: 112%;
+  text-decoration: none;
+  /*margin: 0 150px;*/
+  color: var(--darkColor);
+  /*margin: 0 30px; замена на падинг-для увеличения зоны кликабельности */
+  padding: 20px 30px; /*20 px вмеcто padding у header */
+  border: 1px solid transparent; /*чтобы текст история профиль меньше ехал*/
+}
+.navigation:hover {
+  color: var(--mainColor);
+  border: 1px solid var(--mainColor);
+  box-sizing: border-box; /*чтобы текст меньше ехал*/
+}
+
+.button-header {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  border: none;
+  /*border-radius: 10%;*/
+  font-size: 16px;
+  font-weight: 500;
+  width: 70px;
+  height: 40px;
+  margin-left: auto;
+}
+
+.logo {
+  /*margin-right: 15px; */
+  padding: 0px 30px; /*оттолкнули логотип от синей рамки профиля*/
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  /*padding: 113px 240px;*/
+  /*gap: 80px;*/
+}
+.main-container {
+  display: flex;
+  /*padding: 0px 240px;*/
+  background-color: var(--sectionColor);
+  /*justify-content: space-between;*/
+  flex-direction: column;
+}
+.upper-container {
+  display: flex;
+  flex-direction: row;
+
+  /*width: 380px;
+  height: 494px;*/
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /*margin:113px 0px; зададим padding родителю*/
+  /*padding-left: 240px;*/
+}
+
+.left-part-upper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.upper-container-h1 {
+  margin: auto;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+}
+.upper-container-span {
+  font-size: 24px;
+}
+
+.left-card {
+  width: 500px;
+  height: 96px;
+  background-color: var(--whiteColor);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 24px;
+}
+
+.img-qr,
+.img-package {
+  width: 64px;
+  height: 64px;
+  margin: auto;
+}
+.left-card-span {
+  margin: auto;
+  font-size: 16px;
+  padding-right: 10px;
+}
+
+/*.right-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 494px;
+    background-color: #ffffff;
+    margin:113px 0px;
+    justify-content: space-around;
+}*/
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*width: 500px;*/
+
+  background-color: #ffffff;
+  /*justify-content: space-around;*/
+  /*padding-right: 240px;*/
+}
+
+.right-container-h2 {
+  /*margin-top:32px;
+    margin-left: 72px;
+    margin-right: 72px;*/
+  margin: 32px auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.form {
+  margin: 0px 72px;
+  display: flex; /* размещение детей в ряд */
+  flex-direction: row; /* горизонтально */
+  justify-content: center; /* центрирование */
+  flex-wrap: wrap; /* перенос на новую строку при нехватке места */
+  gap: 20px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-size: 14px;
+  font-weight: medium;
+  color: var(--greyColor);
+}
+
+.city-select,
+.city-select-send,
+.select-approximate {
+  width: 300px;
+  height: 30px;
+}
+
+/*.input-label{
+    display: flex;
+    gap: 10px;
+    padding: 3px 0px;
+}*/
+
+.input-label {
+  display: block;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}
+
+.container-span {
+  display: flex;
+  flex-direction: row;
+}
+.city-span {
+  margin: 0 5px;
+  font-size: 14px;
+  text-decoration: underline;
+  color: var(--greyColor);
+}
+
+.city-span:hover {
+  color: var(--mainColor);
+}
+
+.button-calculate-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.calculate-form-button {
+  background-color: var(--mainColor);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 356px;
+  height: 56px;
+  border-radius: 16px;
+  margin: 25px 0px;
+}
+
+span {
+  font-size: 14px;
+  margin-left: 14px;
+  padding-bottom: 10px;
+}
