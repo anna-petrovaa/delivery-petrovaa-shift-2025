@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="delivery.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <div class="logo">
+            <img src="/assets/logo.png" alt="Логотип">
+        </div>
+        <nav>
+          <a href="/profile.html" class="navigation" >Профиль</a>
+          <a href="" class="navigation">История</a>
+        </nav>
+        <button class="button-header">Выйти</button>
+    </div>
+    </header>
+
+    <section>
+        <div class="main-container">
+            <h1 class="main-container-h1">Способ отправки</h1>
+            <span class="progress-container-span">Шаг 1 из 7</span>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+              </div>
+              <label for="option1" class="card-label">
+            <div class="express-card-container ">
+                <input type="radio" id="option1" name="delivery-option" value="EXPRESS" class="express-radio-input">
+                
+               <div class="left-card">
+                   <img class="left-card-img" src="/assets/PlaneWithBG.png" alt="экспресс">
+                </div>
+               <div class="right-card">
+                <p class="express-p">Экспресс доставка до двери</p>
+                <p class="express-price">780 ₽</p>
+                <span class="express-span">1 рабочий день</span>
+               </div>
+            </label>
+            </div>
+            
+            <label for="option2" class="card-label">
+            <div class="standart-card-container ">
+                
+                <input type="radio" id="option2" name="delivery-option" value="DEFAULT" class="standart-radio-input">
+                
+
+                <div class="left-card">
+                    <img class="left-card-img" src="/assets/PlaneWithBG1.png" alt="экспресс">
+                 </div>
+                <div class="right-card">
+                 <p class="standart-p">Обычная доставка</p>
+                 <p class="standart-price">X ₽</p>
+                 <span class="standart-span">1 рабочий день</span>
+                </div>
+            </label>
+             </div>
+           
+             <div class="banner-img">
+                <img src="/assets/banner.png" alt="реклама">
+             </div>
+
+
+
+        </div>
+
+    </section>
+
+    <script type="module" src="/js/delivery.mjs"></script>  
+</body>
+</html>
